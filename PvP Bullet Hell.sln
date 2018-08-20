@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PvP Bullet Hell", "PvP Bullet Hell.csproj", "{01C4A78E-DAE6-4971-CDE0-73E525A415DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PvP Bullet Hell.Editor", "PvP Bullet Hell.Editor.csproj", "{5CDE9707-1768-6CA7-5CBC-2D8F2CB56CEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01C4A78E-DAE6-4971-CDE0-73E525A415DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C4A78E-DAE6-4971-CDE0-73E525A415DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C4A78E-DAE6-4971-CDE0-73E525A415DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C4A78E-DAE6-4971-CDE0-73E525A415DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CDE9707-1768-6CA7-5CBC-2D8F2CB56CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CDE9707-1768-6CA7-5CBC-2D8F2CB56CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDE9707-1768-6CA7-5CBC-2D8F2CB56CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CDE9707-1768-6CA7-5CBC-2D8F2CB56CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
