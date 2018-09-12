@@ -12,6 +12,10 @@ public class WeaponDropped : NetworkBehaviour {
     private Weapon shotgun = new Weapon(Type.shotgun, 15, 1f, 15f);
     public Type type;
 
+    public Type GetWeaponType() {
+        return this.type;
+    }
+
     private void Start() {
         switch (type) {
             case Type.rifle:
@@ -30,7 +34,6 @@ public class WeaponDropped : NetworkBehaviour {
         if(collision.gameObject.tag == "Player") {
 
             collision.gameObject.GetComponent<PlayerManager>().weapon = weapon;
-            collision.gameObject.GetComponent<PlayerManager>().ChangeWeapon(weapon.type);
             Destroy(this.gameObject);
         }
     }

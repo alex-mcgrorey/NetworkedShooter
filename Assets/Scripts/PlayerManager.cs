@@ -99,19 +99,20 @@ public class PlayerManager : NetworkBehaviour {
 
     [Command]
     public void CmdChangeWeapon(Type type) {
-        //localChangeWeapon(type);
-        if(!isLocalPlayer)
-            RpcChangeWeapon(type);
+        localChangeWeapon(type);
+        RpcChangeWeapon(type);
     }
 
     [ClientRpc]
     public void RpcChangeWeapon(Type type) {
-        localChangeWeapon(type);
+        if (!isLocalPlayer) {
+            localChangeWeapon(type);
+        }
     }
 
     private void localChangeWeapon(Type type) {
-        //weaponRifle.SetActive(false);
-        //weaponShotgun.SetActive(false);
+        weaponRifle.SetActive(false);
+        weaponShotgun.SetActive(false);
 
         try {
             switch (weapon.type) {
@@ -131,16 +132,22 @@ public class PlayerManager : NetworkBehaviour {
     }
 
     public void ChangeWeapon(Type type) {
-       // if (!isServer) {
+        localChangeWeapon(type);
+
+        if (!isServer) {
             CmdChangeWeapon(type);
-     //   }
-     //   else {
-     //       RpcChangeWeapon(type);
-     //   }
+        }
+        else {
+            RpcChangeWeapon(type);
+        }
     }
     
 
     private void CameraControl() {
         playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y, -15);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        ChangeWeapon(collision.gameObject.GetComponent<WeaponDropped>().GetWeaponType());
     }
 }
