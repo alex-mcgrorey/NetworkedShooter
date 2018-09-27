@@ -1,16 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.Networking;
+//using System.Collections;
+//using UnityEngine.Networking;
 
 public enum Type {
-    rifle, shotgun
+    rifle, shotgun, unarmed
 }
 
-public class WeaponDropped : NetworkBehaviour {
+public class WeaponDropped : MonoBehaviour {
     private Weapon weapon;
     private Weapon rifle = new Weapon(Type.rifle, 30, 0.5f, 25f);
     private Weapon shotgun = new Weapon(Type.shotgun, 15, 1f, 15f);
+    private Weapon unarmed = new Weapon(Type.unarmed, 0, 0, 0);
     public Type type;
+
+    public Weapon GetWeapon() {
+        return this.weapon;
+    }
 
     public Type GetWeaponType() {
         return this.type;
@@ -24,17 +29,12 @@ public class WeaponDropped : NetworkBehaviour {
             case Type.shotgun:
                 weapon = shotgun;
                 break;
+            case Type.unarmed:
+                weapon = unarmed;
+                break;
             default:
                 break;
         }
         weapon.Bullet = Resources.Load("Prefabs/Bullet") as GameObject;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.gameObject.tag == "Player") {
-
-            collision.gameObject.GetComponent<PlayerManager>().weapon = weapon;
-            Destroy(this.gameObject);
-        }
     }
 }

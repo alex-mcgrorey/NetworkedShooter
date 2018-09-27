@@ -15,7 +15,7 @@ Platform assembly: E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\Unity
 Loading E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.140 seconds
+- Completed reload, in  0.051 seconds
 Platform assembly: E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\System.dll (this message is harmless)
 desktop: 2560x1080 60Hz; virtual: 4160x1088 at 0,0
@@ -30,20 +30,12 @@ The referenced script on this Behaviour (Game Object 'Bullet') is missing!
  
 (Filename:  Line: 1656)
 
-UnloadTime: 0.786968 ms
-The referenced script on this Behaviour is missing!
+UnloadTime: 0.911354 ms
+Could not register 'RifleDropped' since it contains no NetworkIdentity component
  
-(Filename:  Line: 1510)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-Did not find target for sync message for 5
+Could not register 'ShotgunDropped' since it contains no NetworkIdentity component
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
@@ -70,87 +62,6 @@ The referenced script on this Behaviour (Game Object 'Bullet') is missing!
 The referenced script on this Behaviour (Game Object 'Bullet') is missing!
  
 (Filename:  Line: 1656)
-
-Did not find target for sync message for 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1510)
-
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-Did not find target for sync message for 8
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1510)
-
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1510)
-
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-Did not find target for sync message for 9
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 10
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1510)
-
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1510)
-
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1656)
-
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777}
-ClientDisconnected due to error: Timeout
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 570 -> priority: 1 
+  Thread -> id: 23bc -> priority: 1 

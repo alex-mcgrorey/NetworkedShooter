@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System;
 using UnityEngine.Networking;
 
 public class PlayerManager : NetworkBehaviour {
@@ -15,6 +15,7 @@ public class PlayerManager : NetworkBehaviour {
     private Vector2 dirFacing;
     public float moveSpeed;
 
+    public string equippedWeapon;
     public Weapon weapon;
 
     private Camera playerCamera;
@@ -28,6 +29,8 @@ public class PlayerManager : NetworkBehaviour {
 
     // Use this for initialization
     void Start () {
+        equippedWeapon = "";
+        weapon = new Weapon(Type.unarmed, 0, 0, 0);
         if (isLocalPlayer) {
             InitializeVariables();
         }
@@ -40,7 +43,8 @@ public class PlayerManager : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //LocalPlayers can only update their own instances
+        if (weapon.ToString() != equippedWeapon && !equippedWeapon.Equals(""))
+            localChangeWeapon((Type)Enum.Parse(typeof(Type), equippedWeapon));
         if (isLocalPlayer) {
             GetInput();
             if (i_fire && weapon != null) {
@@ -100,14 +104,11 @@ public class PlayerManager : NetworkBehaviour {
     [Command]
     public void CmdChangeWeapon(Type type) {
         localChangeWeapon(type);
-        RpcChangeWeapon(type);
     }
 
     [ClientRpc]
     public void RpcChangeWeapon(Type type) {
-        if (!isLocalPlayer) {
-            localChangeWeapon(type);
-        }
+        localChangeWeapon(type);
     }
 
     private void localChangeWeapon(Type type) {
@@ -122,9 +123,12 @@ public class PlayerManager : NetworkBehaviour {
                 case Type.shotgun:
                     weaponShotgun.SetActive(true);
                     break;
+                case Type.unarmed:
+                    break;
                 default:
                     break;
             }
+            equippedWeapon = type.ToString();
         }
         catch {
             Debug.Log("Error: Can't change a null weapon.");
@@ -132,14 +136,13 @@ public class PlayerManager : NetworkBehaviour {
     }
 
     public void ChangeWeapon(Type type) {
-        localChangeWeapon(type);
-
-        if (!isServer) {
+        if (isLocalPlayer) {
             CmdChangeWeapon(type);
         }
-        else {
+        else if (isServer) {
             RpcChangeWeapon(type);
         }
+        localChangeWeapon(type);
     }
     
 
@@ -147,7 +150,11 @@ public class PlayerManager : NetworkBehaviour {
         playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y, -15);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        ChangeWeapon(collision.gameObject.GetComponent<WeaponDropped>().GetWeaponType());
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "DroppedWeapon") {
+            weapon = collision.gameObject.GetComponent<WeaponDropped>().GetWeapon();
+            ChangeWeapon(collision.gameObject.GetComponent<WeaponDropped>().GetWeaponType());
+            Destroy(collision.gameObject);
+        }
     }
 }
