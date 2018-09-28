@@ -15,7 +15,7 @@ Platform assembly: E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\Unity
 Loading E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.141 seconds
+- Completed reload, in  0.050 seconds
 Platform assembly: E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\Unity Projects\PvP Bullet Hell\v0.0.001_Data\Managed\System.dll (this message is harmless)
 desktop: 2560x1080 60Hz; virtual: 4160x1088 at 0,0
@@ -30,12 +30,72 @@ The referenced script on this Behaviour (Game Object 'Bullet') is missing!
  
 (Filename:  Line: 1656)
 
-UnloadTime: 0.697821 ms
-Could not register 'RifleDropped' since it contains no NetworkIdentity component
+UnloadTime: 0.770706 ms
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+Did not find target for sync message for 5
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-Could not register 'ShotgunDropped' since it contains no NetworkIdentity component
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+Did not find target for sync message for 6
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
@@ -98,10 +158,6 @@ The referenced script on this Behaviour (Game Object 'Bullet') is missing!
 The referenced script on this Behaviour (Game Object 'Bullet') is missing!
  
 (Filename:  Line: 1656)
-
-Did not find target for sync message for 7
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Did not find target for sync message for 9
  
@@ -131,6 +187,154 @@ The referenced script on this Behaviour (Game Object 'Bullet') is missing!
  
 (Filename:  Line: 1656)
 
+Did not find target for sync message for 11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+Did not find target for sync message for 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+Did not find target for sync message for 16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+Did not find target for sync message for 21
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+Did not find target for sync message for 22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Bullet') is missing!
+ 
+(Filename:  Line: 1656)
+
+Did not find target for sync message for 23
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Did not find target for sync message for 23
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
 The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1510)
@@ -156,4 +360,4 @@ The referenced script on this Behaviour (Game Object 'Bullet') is missing!
 (Filename:  Line: 1656)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 3854 -> priority: 1 
+  Thread -> id: 980 -> priority: 1 
