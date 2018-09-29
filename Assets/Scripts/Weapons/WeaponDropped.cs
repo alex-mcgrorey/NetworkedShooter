@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
-//using System.Collections;
-//using UnityEngine.Networking;
 
 public enum Type {
-    rifle, shotgun, unarmed
+    rifle, shotgun, smg, unarmed
 }
 
 public class WeaponDropped : MonoBehaviour {
     private Weapon weapon;
-    private Weapon rifle = new Weapon(Type.rifle, 30, 0.5f, 25f);
-    private Weapon shotgun = new Weapon(Type.shotgun, 15, 1f, 15f);
+    private Weapon rifle = new Weapon(Type.rifle, 30, 0.5f, 35f);
+    private Weapon shotgun = new Weapon(Type.shotgun, 15, 1f, 10f);
+    private Weapon smg = new Weapon(Type.smg, 50, 0.2f, 20);
     private Weapon unarmed = new Weapon(Type.unarmed, 0, 0, 0);
     public Type type;
 
@@ -28,6 +27,9 @@ public class WeaponDropped : MonoBehaviour {
                 break;
             case Type.shotgun:
                 weapon = shotgun;
+                break;
+            case Type.smg:
+                weapon = smg;
                 break;
             case Type.unarmed:
                 weapon = unarmed;

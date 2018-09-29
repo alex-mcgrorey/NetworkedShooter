@@ -26,6 +26,7 @@ public class PlayerManager : NetworkBehaviour {
     public GameObject PlayerTorso;
     public GameObject weaponRifle;
     public GameObject weaponShotgun;
+    public GameObject weaponSMG;
 
     // Use this for initialization
     void Start () {
@@ -114,6 +115,7 @@ public class PlayerManager : NetworkBehaviour {
     private void localChangeWeapon(Type type) {
         weaponRifle.SetActive(false);
         weaponShotgun.SetActive(false);
+        weaponSMG.SetActive(false);
 
         try {
             switch (weapon.type) {
@@ -122,6 +124,9 @@ public class PlayerManager : NetworkBehaviour {
                     break;
                 case Type.shotgun:
                     weaponShotgun.SetActive(true);
+                    break;
+                case Type.smg:
+                    weaponSMG.SetActive(true);
                     break;
                 case Type.unarmed:
                     break;
@@ -150,7 +155,7 @@ public class PlayerManager : NetworkBehaviour {
         playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y, -15);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "DroppedWeapon") {
             weapon = collision.gameObject.GetComponent<WeaponDropped>().GetWeapon();
             ChangeWeapon(collision.gameObject.GetComponent<WeaponDropped>().GetWeaponType());
