@@ -26,11 +26,12 @@ public class PlayerManager : NetworkBehaviour {
     public GameObject PlayerTorso;
     public GameObject weaponRifle;
     public GameObject weaponShotgun;
+    public GameObject weaponSMG;
 
     // Use this for initialization
     void Start () {
         equippedWeapon = "";
-        weapon = new Weapon(Type.unarmed, 0, 0, 0);
+        weapon = new Unarmed();
         if (isLocalPlayer) {
             InitializeVariables();
         }
@@ -78,15 +79,17 @@ public class PlayerManager : NetworkBehaviour {
 
     [Command]
     private void CmdCheckFire() {
-        GameObject rawBullet = weapon.Fire(this.gameObject);
+        GameObject[] rawBullets = weapon.Fire(this.gameObject);
 
-        if (rawBullet != null) {
-            GameObject bullet = Instantiate(rawBullet);
-            bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * weapon.bulletSpeed;
+        if (rawBullets != null) {
+            foreach (GameObject i in rawBullets) {
+                GameObject bullet = Instantiate(i);
+                bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * weapon.getBulletSpeed();
 
-            NetworkServer.Spawn(bullet);
+                NetworkServer.Spawn(bullet);
 
-            Destroy(bullet, 2);
+                Destroy(bullet, 2);
+            }
         }
     }
 
@@ -114,6 +117,7 @@ public class PlayerManager : NetworkBehaviour {
     private void localChangeWeapon(Type type) {
         weaponRifle.SetActive(false);
         weaponShotgun.SetActive(false);
+        weaponSMG.SetActive(false);
 
         try {
             switch (weapon.type) {
@@ -122,6 +126,9 @@ public class PlayerManager : NetworkBehaviour {
                     break;
                 case Type.shotgun:
                     weaponShotgun.SetActive(true);
+                    break;
+                case Type.smg:
+                    weaponSMG.SetActive(true);
                     break;
                 case Type.unarmed:
                     break;
@@ -150,7 +157,7 @@ public class PlayerManager : NetworkBehaviour {
         playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y, -15);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "DroppedWeapon") {
             weapon = collision.gameObject.GetComponent<WeaponDropped>().GetWeapon();
             ChangeWeapon(collision.gameObject.GetComponent<WeaponDropped>().GetWeaponType());
