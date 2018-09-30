@@ -79,15 +79,17 @@ public class PlayerManager : NetworkBehaviour {
 
     [Command]
     private void CmdCheckFire() {
-        GameObject rawBullet = weapon.Fire(this.gameObject);
+        GameObject[] rawBullets = weapon.Fire(this.gameObject);
 
-        if (rawBullet != null) {
-            GameObject bullet = Instantiate(rawBullet);
-            bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * weapon.getBulletSpeed();
+        if (rawBullets != null) {
+            foreach (GameObject i in rawBullets) {
+                GameObject bullet = Instantiate(i);
+                bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * weapon.getBulletSpeed();
 
-            NetworkServer.Spawn(bullet);
+                NetworkServer.Spawn(bullet);
 
-            Destroy(bullet, 2);
+                Destroy(bullet, 2);
+            }
         }
     }
 

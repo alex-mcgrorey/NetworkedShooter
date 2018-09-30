@@ -13,7 +13,7 @@ public class Weapon {
     protected float bulletSpeed;
     protected float zoom;
     public GameObject Bullet;
-    private float nextFireTimer;
+    protected float nextFireTimer;
 
     public Weapon(Type type) {
         this.type = type;
@@ -27,14 +27,18 @@ public class Weapon {
         return bulletSpeed;
     }
 
-    public GameObject Fire(GameObject player) {
+    public GameObject[] Fire(GameObject player) {
         if (Time.time > nextFireTimer && ammo > 0) {
             nextFireTimer = Time.time + fireRate;
+            GameObject[] bulletList = new GameObject[1];
+
             GameObject bullet = Bullet;
             bullet.transform.position = player.transform.Find("BulletSpawn").position;
             bullet.transform.rotation = player.transform.rotation;
 
-            return bullet;
+            bulletList[0] = bullet;
+
+            return bulletList;
         }
         return null;
     }
