@@ -68,6 +68,10 @@
     <Compile Include="Assets\Scripts\BulletManager.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Rifle.cs" />
+    <Compile Include="Assets\Scripts\Weapons\SMG.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Shotgun.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Unarmed.cs" />
     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponDropped.cs" />
   </ItemGroup>

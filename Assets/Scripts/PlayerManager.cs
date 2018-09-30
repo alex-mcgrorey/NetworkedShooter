@@ -31,7 +31,7 @@ public class PlayerManager : NetworkBehaviour {
     // Use this for initialization
     void Start () {
         equippedWeapon = "";
-        weapon = new Weapon(Type.unarmed, 0, 0, 0);
+        weapon = new Unarmed();
         if (isLocalPlayer) {
             InitializeVariables();
         }
@@ -83,7 +83,7 @@ public class PlayerManager : NetworkBehaviour {
 
         if (rawBullet != null) {
             GameObject bullet = Instantiate(rawBullet);
-            bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * weapon.bulletSpeed;
+            bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * weapon.getBulletSpeed();
 
             NetworkServer.Spawn(bullet);
 
